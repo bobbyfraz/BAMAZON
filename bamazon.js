@@ -32,10 +32,9 @@ function ChooseItem(items){
 	var itemNames = [];
 	for (var index = 0; index < items.length; index++)
 		itemNames.push(items[index].product_name + " id#:" + items[index].item_id);
-
 	Inquirer.prompt([{
-		type: "list",
-		message: "Choose a product to purchase.",
+		type: "rawlist",
+		message: "Choose a product to purchase by entering item ID.",
 		choices: itemNames,
 		name: "itemChoice"
 	},
