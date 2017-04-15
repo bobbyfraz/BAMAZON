@@ -9,7 +9,7 @@ const pool = MySQL.createPool({
 	database: "bamazon_DB"
 });
 
-function DisplayItems(){
+function display(){
 	pool.getConnection(function(error, connection){
 		if (error)
 			throw error;
@@ -94,4 +94,4 @@ function UpdateDatabaseQuantity(itemID, quantityRemaining){
 	});
 };
 
-DisplayItems();
+display();
